@@ -1,0 +1,86 @@
+## Third
+Step:  AIC=-100451
+Diabetes_binary ~ HighBP + HighChol + CholCheck + BMI + Smoker + 
+    Stroke + HeartDiseaseorAttack + PhysActivity + Fruits + Veggies + 
+    HvyAlcoholConsump + AnyHealthcare + NoDocbcCost + GenHlth + 
+    MentHlth + PhysHlth + DiffWalk + Sex + Age + Education + 
+    Income + GenHlth:DiffWalk + BMI:Age + Sex:Age + HighChol:Age + 
+    GenHlth:Income + BMI:DiffWalk + HighBP:HeartDiseaseorAttack + 
+    DiffWalk:Age + GenHlth:PhysHlth + HvyAlcoholConsump:Age + 
+    CholCheck:GenHlth + GenHlth:Sex + HighChol:HeartDiseaseorAttack + 
+    HighChol:GenHlth + HeartDiseaseorAttack:Age + Smoker:GenHlth + 
+    HeartDiseaseorAttack:GenHlth + Fruits:Education + HeartDiseaseorAttack:DiffWalk + 
+    HighBP:HvyAlcoholConsump + HighChol:Stroke + AnyHealthcare:Education + 
+    HighBP:CholCheck + Smoker:Education + BMI:HeartDiseaseorAttack + 
+    BMI:Smoker + MentHlth:DiffWalk + CholCheck:BMI + HighChol:BMI + 
+    HighBP:HighChol + Fruits:Age + PhysActivity:Fruits + Stroke:GenHlth + 
+    HighBP:Sex + Stroke:Age + HeartDiseaseorAttack:NoDocbcCost + 
+    CholCheck:Age + CholCheck:HeartDiseaseorAttack + Fruits:Sex + 
+    HvyAlcoholConsump:GenHlth + HighChol:MentHlth + HighBP:AnyHealthcare + 
+    HighBP:Education + Smoker:Stroke + PhysActivity:Age + PhysActivity:Education + 
+    CholCheck:AnyHealthcare + Veggies:NoDocbcCost + BMI:Sex + 
+    MentHlth:Income + PhysHlth:Income + NoDocbcCost:DiffWalk + 
+    BMI:MentHlth + HighChol:Sex + Sex:Education + Smoker:Sex + 
+    PhysHlth:Age + MentHlth:Age + HeartDiseaseorAttack:PhysHlth + 
+    PhysActivity:PhysHlth + Stroke:MentHlth + BMI:NoDocbcCost + 
+    AnyHealthcare:Age + BMI:PhysActivity + Smoker:DiffWalk + 
+    Smoker:Age + Smoker:HvyAlcoholConsump + AnyHealthcare:DiffWalk + 
+    AnyHealthcare:PhysHlth
+
+## Second
+Step:  AIC=-100451.1
+Diabetes_binary ~ HighBP + HighChol + CholCheck + BMI + Smoker + 
+    Stroke + HeartDiseaseorAttack + PhysActivity + Fruits + Veggies + 
+    HvyAlcoholConsump + AnyHealthcare + NoDocbcCost + GenHlth + 
+    MentHlth + PhysHlth + DiffWalk + Sex + Age + Education + 
+    Income + GenHlth:DiffWalk + BMI:Age + Sex:Age + HighChol:Age + 
+    GenHlth:Income + BMI:DiffWalk + HighBP:HeartDiseaseorAttack + 
+    DiffWalk:Age + GenHlth:PhysHlth + HvyAlcoholConsump:Age + 
+    CholCheck:GenHlth + GenHlth:Sex + HighChol:HeartDiseaseorAttack + 
+    HighChol:GenHlth + HeartDiseaseorAttack:Age + Smoker:GenHlth + 
+    HeartDiseaseorAttack:GenHlth + Fruits:Education + HeartDiseaseorAttack:DiffWalk + 
+    HighBP:HvyAlcoholConsump + HighChol:Stroke + AnyHealthcare:Education + 
+    HighBP:CholCheck + Smoker:Education + BMI:HeartDiseaseorAttack + 
+    BMI:Smoker + MentHlth:DiffWalk + CholCheck:BMI + HighChol:BMI + 
+    HighBP:HighChol + Fruits:Age + PhysActivity:Fruits + Stroke:GenHlth + 
+    HighBP:Sex + Stroke:Age + HeartDiseaseorAttack:NoDocbcCost + 
+    CholCheck:Age + CholCheck:HeartDiseaseorAttack + Fruits:Sex + 
+    HvyAlcoholConsump:GenHlth + HighChol:MentHlth + HighBP:AnyHealthcare + 
+    HighBP:Education + Smoker:Stroke + PhysActivity:Age + PhysActivity:Education + 
+    CholCheck:AnyHealthcare + Veggies:NoDocbcCost + BMI:Sex + 
+    MentHlth:Income + PhysHlth:Income + NoDocbcCost:DiffWalk + 
+    BMI:MentHlth + HighChol:Sex + Sex:Education + Smoker:Sex + 
+    PhysHlth:Age + MentHlth:Age + HeartDiseaseorAttack:PhysHlth + 
+    PhysActivity:PhysHlth + Stroke:MentHlth + BMI:NoDocbcCost + 
+    AnyHealthcare:Age + BMI:PhysActivity + Smoker:DiffWalk + 
+    Smoker:Age + Smoker:HvyAlcoholConsump + AnyHealthcare:DiffWalk + 
+    AnyHealthcare:PhysHlth + Stroke:HeartDiseaseorAttack
+
+## BEST
+Step:  AIC=-100451.2
+Diabetes_binary ~ HighBP + HighChol + CholCheck + BMI + Smoker + 
+    Stroke + HeartDiseaseorAttack + PhysActivity + Fruits + Veggies + 
+    HvyAlcoholConsump + AnyHealthcare + NoDocbcCost + GenHlth + 
+    MentHlth + PhysHlth + DiffWalk + Sex + Age + Education + 
+    Income + GenHlth:DiffWalk + BMI:Age + Sex:Age + HighChol:Age + 
+    GenHlth:Income + BMI:DiffWalk + HighBP:HeartDiseaseorAttack + 
+    DiffWalk:Age + GenHlth:PhysHlth + HvyAlcoholConsump:Age + 
+    CholCheck:GenHlth + GenHlth:Sex + HighChol:HeartDiseaseorAttack + 
+    HighChol:GenHlth + HeartDiseaseorAttack:Age + Smoker:GenHlth + 
+    HeartDiseaseorAttack:GenHlth + Fruits:Education + HeartDiseaseorAttack:DiffWalk + 
+    HighBP:HvyAlcoholConsump + HighChol:Stroke + AnyHealthcare:Education + 
+    HighBP:CholCheck + Smoker:Education + BMI:HeartDiseaseorAttack + 
+    BMI:Smoker + MentHlth:DiffWalk + CholCheck:BMI + HighChol:BMI + 
+    HighBP:HighChol + Fruits:Age + PhysActivity:Fruits + Stroke:GenHlth + 
+    HighBP:Sex + Stroke:Age + HeartDiseaseorAttack:NoDocbcCost + 
+    CholCheck:Age + CholCheck:HeartDiseaseorAttack + Fruits:Sex + 
+    HvyAlcoholConsump:GenHlth + HighChol:MentHlth + HighBP:AnyHealthcare + 
+    HighBP:Education + Smoker:Stroke + PhysActivity:Age + PhysActivity:Education + 
+    CholCheck:AnyHealthcare + Veggies:NoDocbcCost + BMI:Sex + 
+    MentHlth:Income + PhysHlth:Income + NoDocbcCost:DiffWalk + 
+    BMI:MentHlth + HighChol:Sex + Sex:Education + Smoker:Sex + 
+    PhysHlth:Age + MentHlth:Age + HeartDiseaseorAttack:PhysHlth + 
+    PhysActivity:PhysHlth + Stroke:MentHlth + BMI:NoDocbcCost + 
+    AnyHealthcare:Age + BMI:PhysActivity + Smoker:DiffWalk + 
+    Smoker:Age + Smoker:HvyAlcoholConsump + AnyHealthcare:DiffWalk + 
+    AnyHealthcare:PhysHlth + Stroke:HeartDiseaseorAttack + PhysActivity:Income

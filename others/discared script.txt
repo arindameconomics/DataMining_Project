@@ -1,0 +1,76 @@
+data_cv2 = data_cv %>%
+  mutate(fold_id1 = rep(1:K_folds, length=nrow(data)) %>% sample)
+
+rmse=data.frame()
+rmse_temp=data.frame()
+
+for(fold in 1:K_folds) {
+    model_lm_cv = lm(Diabetes_binary ~ HighBP + HighChol + CholCheck + BMI + Smoker +   Stroke + HeartDiseaseorAttack + PhysActivity + Fruits + Veggies + 
+    HvyAlcoholConsump + AnyHealthcare + NoDocbcCost + GenHlth + 
+    MentHlth + PhysHlth + DiffWalk + Sex + Age + Education + 
+    Income + GenHlth:DiffWalk + BMI:Age + Sex:Age + HighChol:Age + 
+    GenHlth:Income + BMI:DiffWalk + HighBP:HeartDiseaseorAttack + 
+    DiffWalk:Age + GenHlth:PhysHlth + HvyAlcoholConsump:Age + 
+    CholCheck:GenHlth + GenHlth:Sex + HighChol:HeartDiseaseorAttack + 
+    HighChol:GenHlth + HeartDiseaseorAttack:Age + Smoker:GenHlth + 
+    HeartDiseaseorAttack:GenHlth + Fruits:Education + HeartDiseaseorAttack:DiffWalk + 
+    HighBP:HvyAlcoholConsump + HighChol:Stroke + AnyHealthcare:Education + 
+    HighBP:CholCheck + Smoker:Education + BMI:HeartDiseaseorAttack + 
+    BMI:Smoker + MentHlth:DiffWalk + CholCheck:BMI + HighChol:BMI + 
+    HighBP:HighChol + Fruits:Age + PhysActivity:Fruits + Stroke:GenHlth + 
+    HighBP:Sex + Stroke:Age + HeartDiseaseorAttack:NoDocbcCost + 
+    CholCheck:Age + CholCheck:HeartDiseaseorAttack + Fruits:Sex + 
+    HvyAlcoholConsump:GenHlth + HighChol:MentHlth + HighBP:AnyHealthcare + 
+    HighBP:Education + Smoker:Stroke + PhysActivity:Age + PhysActivity:Education + 
+    CholCheck:AnyHealthcare + Veggies:NoDocbcCost + BMI:Sex + 
+    MentHlth:Income + PhysHlth:Income + NoDocbcCost:DiffWalk + 
+    BMI:MentHlth + HighChol:Sex + Sex:Education + Smoker:Sex + 
+    PhysHlth:Age + MentHlth:Age + HeartDiseaseorAttack:PhysHlth + 
+    PhysActivity:PhysHlth + Stroke:MentHlth + BMI:NoDocbcCost + 
+    AnyHealthcare:Age + BMI:PhysActivity + Smoker:DiffWalk + 
+    Smoker:Age + Smoker:HvyAlcoholConsump + AnyHealthcare:DiffWalk + 
+    AnyHealthcare:PhysHlth + Stroke:HeartDiseaseorAttack + PhysActivity:Income,data=filter(data_cv2, fold_id1 != fold))
+    rmse_temp <- rbind(rmse(model_lm_cv,filter(data_cv2, fold_id1 == fold)),rmse_temp) 
+  rmse =data.frame(c(rmse, rmse_temp))
+  rmse_temp=data.frame()
+  print(fold)
+}
+
+rmse_cv=data.frame()
+rmse_cv_temp=data.frame()
+
+for(fold in 1:K_folds) {
+  for (k in 1:2){
+    model_knn_cv = knnreg(Diabetes_binary ~ HighBP + HighChol + CholCheck + BMI + Smoker +   Stroke + HeartDiseaseorAttack + PhysActivity + Fruits + Veggies + 
+    HvyAlcoholConsump + AnyHealthcare + NoDocbcCost + GenHlth + 
+    MentHlth + PhysHlth + DiffWalk + Sex + Age + Education + 
+    Income + GenHlth:DiffWalk + BMI:Age + Sex:Age + HighChol:Age + 
+    GenHlth:Income + BMI:DiffWalk + HighBP:HeartDiseaseorAttack + 
+    DiffWalk:Age + GenHlth:PhysHlth + HvyAlcoholConsump:Age + 
+    CholCheck:GenHlth + GenHlth:Sex + HighChol:HeartDiseaseorAttack + 
+    HighChol:GenHlth + HeartDiseaseorAttack:Age + Smoker:GenHlth + 
+    HeartDiseaseorAttack:GenHlth + Fruits:Education + HeartDiseaseorAttack:DiffWalk + 
+    HighBP:HvyAlcoholConsump + HighChol:Stroke + AnyHealthcare:Education + 
+    HighBP:CholCheck + Smoker:Education + BMI:HeartDiseaseorAttack + 
+    BMI:Smoker + MentHlth:DiffWalk + CholCheck:BMI + HighChol:BMI + 
+    HighBP:HighChol + Fruits:Age + PhysActivity:Fruits + Stroke:GenHlth + 
+    HighBP:Sex + Stroke:Age + HeartDiseaseorAttack:NoDocbcCost + 
+    CholCheck:Age + CholCheck:HeartDiseaseorAttack + Fruits:Sex + 
+    HvyAlcoholConsump:GenHlth + HighChol:MentHlth + HighBP:AnyHealthcare + 
+    HighBP:Education + Smoker:Stroke + PhysActivity:Age + PhysActivity:Education + 
+    CholCheck:AnyHealthcare + Veggies:NoDocbcCost + BMI:Sex + 
+    MentHlth:Income + PhysHlth:Income + NoDocbcCost:DiffWalk + 
+    BMI:MentHlth + HighChol:Sex + Sex:Education + Smoker:Sex + 
+    PhysHlth:Age + MentHlth:Age + HeartDiseaseorAttack:PhysHlth + 
+    PhysActivity:PhysHlth + Stroke:MentHlth + BMI:NoDocbcCost + 
+    AnyHealthcare:Age + BMI:PhysActivity + Smoker:DiffWalk + 
+    Smoker:Age + Smoker:HvyAlcoholConsump + AnyHealthcare:DiffWalk + 
+    AnyHealthcare:PhysHlth + Stroke:HeartDiseaseorAttack + PhysActivity:Income,data=filter(data_cv2, fold_id1 != fold),k=k)
+    rmse_cv_temp <- rbind(rmse(model_knn_cv,filter(data_cv2, fold_id1 == fold)),rmse_cv_temp) 
+    print(rmse_cv_temp)
+    print(k)
+  }
+  rmse_cv =data.frame(c(rmse_cv, rmse_cv_temp))
+  rmse_cv_temp=data.frame()
+  print(fold)
+}
