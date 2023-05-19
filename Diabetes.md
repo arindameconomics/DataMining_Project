@@ -748,8 +748,6 @@ This looks many data is tend to the side of the confidence. Note that
 although we tried to do low confidence level, its result does not change
 mostly.
 
-[1] <avijit@iba-du.edu>
 
-[2] <arindamchatterjee@utexas.edu>
+<arindamchatterjee@utexas.edu>
 
-[3] <take.hashimoto0527@utexas.edu>
