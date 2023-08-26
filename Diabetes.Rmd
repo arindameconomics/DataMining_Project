@@ -1,7 +1,9 @@
 ---
 title: "Best Predictive Model for Diabetes"
 author:
-- "Arindam Chatterjee (UT EID - AC83995)^[arindamchatterjee@utexas.edu]"
+- "Arindam Chatterjee ^[arindamchatterjee@utexas.edu], 
+   Avijit Mallik ^[avijit@iba-du.edu]
+   Takehiro Hasimoto ^[take.hashimoto0527@gmail.com]"
 date: ''
 output:
   pdf_document: default
