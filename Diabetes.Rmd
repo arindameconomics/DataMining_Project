@@ -7,22 +7,8 @@ author:
 date: ''
 output:
   pdf_document: default
-abstract: "Diabetes is a prevalent chronic disease in the US, affecting millions of
-  people and placing a significant financial burden on the economy. So in this paper, to contribute decreasing
-  diabetes, we executed four analysis on four important pillars. Those are (1) to build the best predict diabetes model,
-  (2) to construct the risk score for diabetes, (3) To identify the critical factors causing Diabetes, using correlation matrix, PCA analysis & variable importance plot (using a random forest model), and (4)
-  find other important factors that we have not yet got from academic paper. For the
-  first analysis, we got the linear probability model with 92 variables (21 variables
-  and 71 cross term variables). For the second analysis, we could get the crucial
-  variables to increase the risk score of diabetes is High blood pressure and General
-  health and BMI. While the variable that is not related to the diabetes, i.e. it is that variable that makes
-  the risk score to decrease is 'Heavy Alcohol Consumption.' From the third analysis, we found from the correlation matrix which shows that there is a high positive correlation between Diabetes & High BP, High cholesterol, age, Heart disease, BMI, and also general health. Furthermore, in the fourth analysis, we have seen from the academic papers/ journal documnets and found that fasting, metabolic rate, blood glucose level, cholesterol
-  level, stress, inflammatory, and also pregnancy are the factors which contribute to the onset, and/ or prevalence of Diabetes in the USA. We suggested to collect these kind of
-  data to construct better predictive diabetes model."
-thanks: We would like to express our gratitude to Professor James Scott and Rui Zuo,
-  University Texas Austin. Their expertise, guidance, and support were invaluable
-  in shaping the research and ensuring its successful completion. Any errors or omissions
-  are the sole responsibility of us, the authors of this document.
+abstract: "Diabetes is a prevalent chronic disease in the US, affecting millions of people and placing a significant financial burden on the economy. So in this paper, to contribute decreasing diabetes, we executed four analysis on four important pillars. Those are (1) to build the best predict diabetes model, (2) to construct the risk score for diabetes, (3) To identify the critical factors causing Diabetes, using correlation matrix, PCA analysis & variable importance plot (using a random forest model), and (4) find other important factors that we have not yet got from academic paper. For the first analysis, we got the linear probability model with 92 variables (21 variables and 71 cross term variables). For the second analysis, we could get the crucial variables to increase the risk score of diabetes is High blood pressure and General health and BMI. While the variable that is not related to the diabetes, i.e. it is that variable that makes the risk score to decrease is 'Heavy Alcohol Consumption.' From the third analysis, we found from the correlation matrix which shows that there is a high positive correlation between Diabetes & High BP, High cholesterol, age, Heart disease, BMI, and also general health. Furthermore, in the fourth analysis, we have seen from the academic papers/ journal documnets and found that fasting, metabolic rate, blood glucose level, cholesterol level, stress, inflammatory, and also pregnancy are the factors which contribute to the onset, and/ or prevalence of Diabetes in the USA. We suggested to collect these kind of data to construct better predictive diabetes model."
+
 keywords: Diabetes, Best Predictive Model, Risk Scoring, Natural Language Processing
 ---
 
@@ -782,3 +768,13 @@ The support-confidence plot at the section 3-4 is as follow:
 knitr::include_graphics("./fig/plot_token.png")
 ```
 It seems that many data is tend be on the side of the confidence level. Note that although we tried to do low confidence level, the result mostly does not change.
+
+#
+
+Arindam Chatterjee (arindamchatterjee@utexas.edu)
+
+
+Avijit Mallik (avijit@iba-du.edu)
+
+
+Takehiro Hasimoto (take.hashimoto0527@gmail.com)
